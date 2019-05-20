@@ -23,29 +23,35 @@ public class Main {
 //        System.out.println(userName.toUpperCase());
 //        System.out.println(userName.toLowerCase());
 //        System.out.println("\n");
-        int[] randomNumbers = {98, 0, 41, 3, 5, 82, 978, 323, 38, 915};
+        int[] randomNumbers = {98, 0, 41, 82, 323, 38};
 
         //for loop
-        for (int i : randomNumbers) System.out.println("Array element " + i);
+        for (int forLoopInt : randomNumbers) System.out.println("Array element: " + forLoopInt);
         System.out.println("\n");
 
         //Do While Loop
-        int x = 1;
+        int doWhileLoopInt = 1;
         do {
-            System.out.println("This is 'do while' loop " + x + " of 5");
-            x++;
-        } while (x < 6);
+            System.out.println("This is 'do while' loop " + doWhileLoopInt + " of 5");
+            doWhileLoopInt++;
+        } while (doWhileLoopInt < 6);
         System.out.println("\n");
 
         //while loop
-        int doWhileInt = 1;
-        while (doWhileInt < 6) {
-            System.out.println("While loop " + doWhileInt);
-            doWhileInt++;
+        int whileLoopInt = 1;
+        while (whileLoopInt < 6) {
+            System.out.println("While loop " + whileLoopInt);
+            whileLoopInt++;
         }
         //print general info on the int array 'randomNumbers'
         System.out.println("\nThere are " + randomNumbers.length + " elements in the array 'randomNumbers'");
-        System.out.println(Arrays.sort(randomNumbers));
+
+        // Why did I have to convert the int array to a string to print out the sorted list
+        // when the unsorted list could print without an issue?
+        Arrays.sort(randomNumbers);
+        System.out.println("Here's a sorted array" + Arrays.toString(randomNumbers));
+
+
     }
 }
 
